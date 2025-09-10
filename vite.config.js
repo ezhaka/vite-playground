@@ -9,6 +9,7 @@ export default defineConfig({
     port: 5173,
     allowedHosts: [
       '.matter.jetbrains.ai',
+      '.matter.labs.jb.gg',
       'localhost',
       '127.0.0.1',
       '0.0.0.0'
