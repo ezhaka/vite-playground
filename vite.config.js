@@ -7,12 +7,6 @@ export default defineConfig({
   server: {
     host: '0.0.0.0', // Listen on all IPv4 addresses
     port: 5173,
-    allowedHosts: [
-      '.matter.jetbrains.ai',
-      '.matter.labs.jb.gg',
-      'localhost',
-      '127.0.0.1',
-      '0.0.0.0'
-    ], // Allow specific hosts including the matter domain
+    allowedHosts: true
   },
 })
