@@ -10,3 +10,18 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+Then open [http://localhost:5173](http://localhost:5173) in your browser. Changes to source files are reflected instantly thanks to Vite's Hot Module Replacement.
+
+## Why Vite?
+
+- **Instant server start** — no bundling on startup, just native ES modules
+- **Lightning-fast HMR** — updates reflect in the browser in milliseconds
+- **Optimized builds** — Rollup-powered production output with code splitting out of the box
