@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 
+let nextId = 1
+
 function App() {
   const [todos, setTodos] = useState([])
   const [input, setInput] = useState('')
@@ -8,7 +10,7 @@ function App() {
   function addTodo() {
     const text = input.trim()
     if (!text) return
-    setTodos([...todos, { id: Date.now(), text, done: false }])
+    setTodos(prev => [...prev, { id: nextId++, text, done: false }])
     setInput('')
   }
 
@@ -49,8 +51,8 @@ function App() {
             <button className="delete" onClick={() => deleteTodo(todo.id)}>✕</button>
           </li>
         ))}
-        {todos.length === 0 && <p className="empty">No tasks yet. Add one above!</p>}
       </ul>
+      {todos.length === 0 && <p className="empty">No tasks yet. Add one above!</p>}
     </div>
   )
 }
