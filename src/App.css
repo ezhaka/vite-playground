@@ -1,42 +1,95 @@
 #root {
-  max-width: 1280px;
+  max-width: 480px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.todo-app h1 {
   text-align: center;
+  margin: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.todo-input {
+  display: flex;
+  gap: 0.5rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-input input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #555;
+  border-radius: 6px;
+  background: #1a1a1a;
+  color: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.todo-input input:focus {
+  outline: 2px solid #646cff;
+  border-color: transparent;
 }
 
-.card {
-  padding: 2em;
+.todo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.read-the-docs {
+.todo-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #1a1a1a;
+}
+
+.todo-list li.done span {
+  text-decoration: line-through;
   color: #888;
 }
+
+.todo-list li span {
+  flex: 1;
+  text-align: left;
+}
+
+.todo-list li input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  cursor: pointer;
+  accent-color: #646cff;
+}
+
+.todo-list li button.delete {
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  line-height: 1;
+}
+
+.todo-list li button.delete:hover {
+  background: #333;
+  color: #ff6b6b;
+}
+
+.empty {
+  text-align: center;
+  color: #888;
+  margin: 1rem 0;
+}
+
